@@ -1,0 +1,94 @@
+/* 
+	Stylesheet for my personal web site 
+	Hian Neiva
+*/
+
+ @font-face { font-family: Dodge; src: url('DODGE.ttf'); } 
+
+body{
+	color: white;
+	font-family: sans-serif;
+	font-size: 120%;
+	background: teal;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 0;
+	animation-name: mainBG;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+
+@keyframes mainBG{
+	from{
+		background-color: teal;
+	}
+	to{
+		background-color: #006060;
+	}
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover{
+	color: #00B0B0;
+	animation-name: linkHover;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+}
+
+@keyframes linkHover{
+	from{
+		color: white;
+	}
+	to{
+		color: #0CC;
+	}
+}
+
+.customFont{
+	font-family: Dodge;
+}
+
+.biggerFont{
+	font-size: 200%;
+}
+
+.bigFont{
+	font-size: 160%;
+}
+
+#sideMenu{
+	text-align: center;
+	z-index: 10;
+	width: 256px;
+	height: 100%;
+	padding: 16px;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url("img/sideMenu_BG.png");
+	background-repeat: repeat-y;
+	background-position: 0 0;
+	animation-name: sideMenuScrolling;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes sideMenuScrolling{
+	from{
+		background-position: 0 0;
+	}	
+	to{
+		background-position: 0 32px;
+	}
+}
