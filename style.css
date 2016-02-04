@@ -15,21 +15,25 @@ body{
 	padding: 0;
 	margin: 0;
 	z-index: 0;
+	/*
 	animation-name: mainBG;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: ease;
+	*/
 }
 
+/*
 @keyframes mainBG{
 	from{
 		background-color: teal;
 	}
 	to{
-		background-color: #006060;
+		background-color: ;
 	}
 }
+*/
 
 a{
 	color: white;
@@ -65,17 +69,41 @@ a:hover{
 	font-size: 160%;
 }
 
+.schrodingerDead{
+	display: none;
+	opacity: 0;
+}
+
+.schrodingerAlive{
+	display: visible;
+	opacity: 1;
+	animation-name: catReveal;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes catReveal{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
 #sideMenu{
 	text-align: center;
 	z-index: 10;
 	width: 256px;
-	height: 100%;
+	height: calc(100% - 32px);
 	padding: 16px;
 	margin: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	background-image: url("img/sideMenu_BG.png");
+	background-color: #006060;
 	background-repeat: repeat-y;
 	background-position: 0 0;
 	animation-name: sideMenuScrolling;
@@ -91,4 +119,24 @@ a:hover{
 	to{
 		background-position: 0 32px;
 	}
+}
+
+#content{
+	width: calc(100% - 320px);
+	height: calc(100% - 32px);
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 288px;
+	padding: 16px;
+}
+
+#fixedText{
+	font-size: 70%;
+	text-align: right;
+	height: 24px;
+	padding: 4px;
+	position: fixed;
+	bottom: 0;
+	right: 16px;
 }
