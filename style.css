@@ -35,6 +35,10 @@ body{
 }
 */
 
+p{
+	text-align: justify;
+}
+
 a{
 	color: white;
 	text-decoration: none;
@@ -75,7 +79,7 @@ a:hover{
 }
 
 .schrodingerAlive{
-	display: visible;
+	display: initial;
 	opacity: 1;
 	animation-name: catReveal;
 	animation-duration: 0.5s;
@@ -90,6 +94,25 @@ a:hover{
 	to{
 		opacity: 1;
 	}
+}
+
+.socialIcons{
+	background: url("img/social-icons.png");
+	display: block;
+	height: 64px; 
+	width: 64px;
+}
+
+#iconLinkedIn{
+	background-position: 64px 0;
+	position: absolute;
+	left: 16px;
+}
+
+#iconSteam{
+	background-position: 0 64px;
+	position: absolute;
+	left: 94px;
 }
 
 #sideMenu{
@@ -132,11 +155,16 @@ a:hover{
 }
 
 #fixedText{
-	font-size: 70%;
+	font-size: 50%;
 	text-align: right;
-	height: 24px;
+	height: 48px;
+	width: calc(100% - 40px);
 	padding: 4px;
 	position: fixed;
 	bottom: 0;
 	right: 16px;
+}
+
+#about, #professional, #others, #contact{
+	z-index: 5;
 }
