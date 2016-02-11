@@ -5,7 +5,7 @@
 
 function reveal(divID){
 	
-	var divs = [document.getElementById("about"), document.getElementById("professional"), document.getElementById("others"), document.getElementById("contact")];
+	var divs = [document.getElementById("about"), document.getElementById("professional"), document.getElementById("others")];
 	
 	for(var i=0; i< divs.length; i++){
 		divs[i].className = "schrodingerDead";

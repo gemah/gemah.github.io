@@ -46,7 +46,7 @@ a{
 }
 
 a:hover{
-	color: #00B0B0;
+	color: #0EE;
 	animation-name: linkHover;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -57,7 +57,7 @@ a:hover{
 		color: white;
 	}
 	to{
-		color: #0CC;
+		color: #0EE;
 	}
 }
 
