@@ -1,5 +1,5 @@
 /* 
-	Stylesheet for my personal web site 
+	Stylesheet for my personal web site (Responsive variant)
 	Hian Neiva
 */
 
@@ -15,28 +15,11 @@ body{
 	padding: 0;
 	margin: 0;
 	z-index: 0;
-	/*
-	animation-name: mainBG;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: ease;
-	*/
 }
-
-/*
-@keyframes mainBG{
-	from{
-		background-color: teal;
-	}
-	to{
-		background-color: ;
-	}
-}
-*/
 
 p{
 	text-align: justify;
+	margin-bottom: 32px;
 }
 
 a{
@@ -46,7 +29,7 @@ a{
 }
 
 a:hover{
-	color: #0EE;
+	opacity: 0.5;
 	animation-name: linkHover;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -54,10 +37,10 @@ a:hover{
 
 @keyframes linkHover{
 	from{
-		color: white;
+		opacity: 1;
 	}
 	to{
-		color: #0EE;
+		opacity: 0.5;
 	}
 }
 
@@ -67,14 +50,14 @@ a:hover{
 
 .biggerFont{
 	font-size: 200%;
+	text-align: center;
+	width: 100%;
 }
 
 .bigFont{
 	font-size: 160%;
-}
-
-.mobile{
-	display: none;
+	text-align: center;
+	width: 100%;
 }
 
 .schrodingerDead{
@@ -100,6 +83,11 @@ a:hover{
 	}
 }
 
+.desktop{
+	display: none;
+}
+
+
 .socialIcons{
 	background: url("img/social-icons.png");
 	display: block;
@@ -120,54 +108,30 @@ a:hover{
 }
 
 #sideMenu{
-	text-align: center;
-	z-index: 10;
-	width: 256px;
-	height: calc(100% - 32px);
-	padding: 16px;
-	margin: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-image: url("img/sideMenu_BG.png");
+	width: 100%;
+	height: 64px;
+	text-align: center;
 	background-color: #006060;
-	background-repeat: repeat-y;
-	background-position: 0 0;
-	animation-name: sideMenuScrolling;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+	z-index: 10;
 }
 
-@keyframes sideMenuScrolling{
-	from{
-		background-position: 0 0;
-	}	
-	to{
-		background-position: 0 32px;
-	}
+#sideMenu .bigFont{
+	padding: 0 4px;
 }
 
 #content{
-	margin-left: 16px;
-	width: calc(100% - 336px);
-	height: calc(100% - 32px);
+	margin: 72px 16px 16px 16px;
 	z-index: 1;
-	position: fixed;
-	top: 0;
-	left: 288px;
-	padding: 16px 32px 16px 16px;
 }
 
 #fixedText{
+	display: block;
 	font-size: 50%;
 	text-align: right;
-	height: auto;
-	width: calc(100% - 326px);
 	padding: 4px;
-	position: fixed;
-	bottom: 0;
-	right: 16px;
 }
 
 #about, #professional, #others, #contact{

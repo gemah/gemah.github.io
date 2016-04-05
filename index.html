@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" media="all and (min-width: 720px)">
+		<link rel="stylesheet" href="responsive.css" media="all and (max-width: 719px)">
 		<meta name="description" content="Personal Web Page">
 		<meta name="auhtor" content="Hian Neiva">
 		<meta name="keywords" content="Computer Engineering, Programming, Personal, Professional, Resume">
@@ -10,44 +11,55 @@
 	</head>
 	<body>
 		<div id="sideMenu" class="customFont">
-			<span class="biggerFont">Menu</span>
-			<br><br><br>
-			<a class="bigFont" href="#" onclick="reveal(0);">Sobre</a>
-			<br><br>
-			<a class="bigFont" href="#" onclick="reveal(1);">Profissional</a>
-			<br><br>
-			<a class="bigFont" href="#" onclick="reveal(2);">Outros Projetos</a>
+			<span class="desktop">
+				<span class="biggerFont">Menu</span>
+				<br><br><br>
+				<a class="bigFont" href="#" onclick="reveal(0);">Sobre</a>
+				<br><br>
+				<a class="bigFont" href="#" onclick="reveal(1);">Profissional</a>
+				<br><br>
+				<a class="bigFont" href="#" onclick="reveal(2);">Outros Projetos</a>
+			</span>
+			<span class="mobile">
+				<a class="bigFont" href="#" onclick="reveal(0); altBG(0);">S</a>
+				<a class="bigFont" href="#" onclick="reveal(1); altBG(1);">P</a>
+				<a class="bigFont" href="#" onclick="reveal(2); altBG(2);">O</a>
+			</span>
 		</div>
 		<div id="content">
 			<div id="about" class="schrodingerAlive">
 				<span class="bigFont customFont">Sobre Mim</span>
 				<br>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Meu nome é Hian Neiva, sou estudante de Engenharia de Computação pelo <a href="http://www.cefetmg.br/" style="font-style: italic;">Centro Federal de Educação Tecnológica de Minas gerais</a>, e logo como egresso formado e graduado em Bacharelado em Engenharia de Computação por essa mesma faculdade. Tenho interesse em Arte e Tecnologia, principalmente no que as pessoas tem acesso no dia-a-dia.
+					Meu nome é Hian Neiva, recém formado como Bacharel em Engenharia de Computação pelo <a href="http://www.cefetmg.br/" style="font-style: italic;">Centro Federal de Educação Tecnológica de Minas Gerais</a>.<br>
+					Tenho interesse em Arte, como um hobbie, e Computação, principalmente se tratando de programação e UX.
 				</p>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Use o menu à esquerda para para navegar pelo site e conhecer mais sobre o que eu faço. Caso tenha interesse, pode me encontrar também nas seguintes plataformas:
+					Use o menu à esquerda para para navegar pelo site e conhecer mais sobre o que eu faço. Caso tenha interesse, pode me encontrar também nas seguintes plataformas:
 				</p>
 				<div style="width: 142px; height: 64px; padding: 0;">
+					<div style="width: 32px;"></div>
 					<a href="https://www.linkedin.com/profile/view?id=381417804" target="_blank"><div class="socialIcons" id="iconLinkedIn" name="LinkedIn"></div></a>
 					<a href="http://www.steamcommunity.com/id/hian_n/" target="_blank"><div class="socialIcons" id="iconSteam" name="Steam"></div></a>
 				</div>
 				<br>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Ou se preferir, pode entrar em contato comigo por e-mail: <i><b><a href="mailto:hianneiva@gmail.com">GMail</a></b></i>, como meio principal ou <i><b><a href="mailto:hianneiva@outlook.com">Outlook</a></b></i> como alternativa caso o primeiro não funcione por qualquer motivo.
+					Ou se preferir, pode entrar em contato comigo pelos seguintes e-mails: <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i><b><a href="mailto:hianneiva@gmail.com">hianneiva@gmail.com</a></b></i> (e-mail principal);<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i><b><a href="mailto:hianneiva@outlook.com">hianneiva@outlook.com</a></b></i> (e-mail alternativo).
 				</p>
 			</div>
 			<div id="professional" class="schrodingerDead">
 				<span class="bigFont customFont">Profissional</span>
 				<br>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Aqui disponibilizarei informações profissionais acerca de minha pessoa.
+					Aqui disponibilizarei informações profissionais acerca de minha pessoa.
 				</p>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Currículo atualizado (04/02/2016): <i><a href="src/Curriculum_Vitae_-_Hian_Neiva.pdf" target="_blank">Link para currículo em PDF</a></i>
+					Currículo atualizado (04/02/2016): <i><a href="src/Curriculum_Vitae_-_Hian_Neiva.pdf" target="_blank">Link para currículo em PDF</a></i>
 				</p>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Demonstrações de trabalhos desenvolvidos:
+					Demonstrações de trabalhos desenvolvidos:
 				</p>
 				<ul>
 					<li><b><i><a href="./demoTouchscreen" target="_blank">Protótipo de Interface Touchscreen</a></i></b>, trata-se de um protótipo de Interface Touchscreen utilizada em <i>desktops</i> embutidos em espaços para uso do público geral.</li>
@@ -62,11 +74,10 @@
 				</ul>
 			</div>
 			<div id="fixedText">
-				* Este site foi desenvolvido em HTML5, CSS3 e JavaScript e, portanto, é melhor visualizado em browsers modernos como Chrome, Edge e Firefox.
+				Site criado por Hian Neiva, 2016. Este site foi desenvolvido em HTML5, CSS3 e JavaScript e, portanto, é melhor visualizado em browsers modernos como Chrome, Edge e Firefox.
 				<br>
 				A fonte <i>Dodge</i> foi criada por <i>Saji Johnny Kundukulam</i> e está disponível para uso gratuito e não-comercial em: <a href="http://www.dafont.com/pt/dodge.font">dafont.com</a>.
-				<br>
-				Site criado por Hian Neiva, 2016.
+				
 			</div>
 		</div>
 		<script src="main.js"></script>
