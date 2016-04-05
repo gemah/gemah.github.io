@@ -3,6 +3,14 @@
 	Hian Neiva 2016
 */
 
+window.addEventListener("resize", function(){
+	if(window.innerWidth >719){
+		document.body.style.backgroundColor = "teal";
+		document.getElementById("sideMenu").style.backgroundColor = "#006060";
+		document.getElementById("fixedText").style.display = "block";
+	}
+});
+
 function reveal(divID){
 	
 	var divs = [document.getElementById("about"), document.getElementById("professional"), document.getElementById("others")];
